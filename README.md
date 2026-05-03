@@ -50,3 +50,16 @@ This project aims to predict employee attrition using machine learning technique
 * Higher income reduces likelihood of leaving
 * Work-life balance plays a significant role in retention
 * Overtime is associated with higher attrition
+
+## Output
+Final predictions are saved as: outputs/s16686.csv
+
+## Future Improvements
+* Apply SMOTE instead of random oversampling
+* Experiment with advanced models
+* Perform hyperparameter tuning
+* Deploy as a web application
+
+## Author
+Fazra Farook  
+BSc (Hons) in Applied Statistics - University of Colombo
