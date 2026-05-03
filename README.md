@@ -79,7 +79,7 @@ Focus on interpretability, simplicity, and understanding the impact of predictor
 - Deploy as a **web application/dashboard**  
 
 ## Output
-Final predictions file: [Predicted_Attrition.csv](outputs/Predicted_Attrition.csv)
+Final predictions file: [Predicted_Attrition.csv](output/Predicted_Attrition.csv)
 
 ## Author
 Fazra Farook  
