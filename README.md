@@ -68,10 +68,18 @@ Focus on interpretability, simplicity, and understanding the impact of predictor
 - **Overtime** strongly increases likelihood of leaving  
 - **Work-life balance** reduces attrition probability  
 - **Training frequency** improves employee retention  
-- Some job roles show higher turnover patterns  
+- Some job roles show higher turnover patterns
+
+## Future Improvements
+
+- Apply **SMOTE** or advanced resampling techniques  
+- Perform **hyperparameter tuning**  
+- Explore **ensemble models (Random Forest, XGBoost)**  
+- Improve minority class prediction performance  
+- Deploy as a **web application/dashboard**  
 
 ## Output
-Final predictions are saved as: 
+Final predictions file: [Predicted_Attrition.csv](outputs/Predicted_Attrition.csv)
 
 ## Author
 Fazra Farook  
