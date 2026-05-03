@@ -52,7 +52,7 @@ This project aims to predict employee attrition using machine learning technique
 * Overtime is associated with higher attrition
 
 ## Output
-Final predictions are saved as: outputs/s16686.csv
+Final predictions are saved as: outputs/Predicted_Attrition.csv
 
 ## Future Improvements
 * Apply SMOTE instead of random oversampling
