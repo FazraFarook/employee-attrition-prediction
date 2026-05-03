@@ -1,64 +1,77 @@
 # Employee Attrition Prediction
-
-This project aims to predict employee attrition using machine learning techniques. The focus is on building a clear, interpretable, and well-structured step-by-step workflow rather than relying on complex or black-box models.
+This project aims to predict employee attrition using machine learning techniques. The focus is on building a clear, interpretable, and well-structured workflow using statistical reasoning and model transparency rather than complex black-box models.
 
 ## Approach
-
 ### 1. Exploratory Data Analysis (EDA)
 
-* Checked data structure, distributions, and summary statistics
-* Visualized numerical and categorical features
-* Identified class imbalance in the target variable
+- Examined dataset structure and summary statistics  
+- Visualized distributions of numerical and categorical variables  
+- Identified **severe class imbalance** in the target variable (Attrition)  
+- Observed weak correlations between predictors  
 
 ### 2. Data Preprocessing
 
-* Removed non-informative features
-* One-hot encoding for categorical variables
-* Verified absence of missing values
+- Removed non-informative feature (**EmployeeID**)  
+- Applied **one-hot encoding** to categorical variables  
+- Aligned train and test datasets to ensure consistent features  
+- Confirmed absence of missing values  
 
 ### 3. Feature Engineering
 
-* Created **IncomePerYear** from MonthlyIncome
-* Combined satisfaction-related variables into **TotalSatisfaction**
+- Created **IncomePerYear** from MonthlyIncome  
+- Constructed **TotalSatisfaction** by combining:
+  - Job Satisfaction  
+  - Environment Satisfaction  
+  - Relationship Satisfaction  
+- Dropped redundant variables to reduce multicollinearity  
 
 ### 4. Handling Class Imbalance
 
-* Applied **random oversampling** to balance the minority class
+- Used **class_weight = 'balanced'** in Logistic Regression  
+- This assigns higher importance to the minority class based on inverse frequency  
 
 ### 5. Feature Selection
 
-* Used Sequential Feature Selector (forward selection)
-* Optimized using F1-score
+- Applied **Sequential Feature Selector (Forward Selection)**  
+- Selected **top 10 features**  
+- Optimized using **F1-score with 5-fold cross-validation**  
 
 ### 6. Model
 
-* Logistic Regression (no advanced models used)
-#### Rationale: Focus on interpretability, simplicity, and understanding feature effects.
+- **Logistic Regression (no regularization)**  
+
+**Rationale:**  
+Focus on interpretability, simplicity, and understanding the impact of predictors on attrition.
 
 ### 7. Threshold Optimization
 
-* Tuned classification threshold to maximize F1-score
+- Tuned classification threshold (0.3 – 0.7 range)  
+- Selected optimal threshold based on **maximum F1-score**  
 
 ### 8. Evaluation
 
-* Accuracy, Precision, Recall, F1-score
-* Confusion Matrix
-* ROC-AUC Score
+- Accuracy, Precision, Recall, F1-score  
+- Confusion Matrix  
+- ROC-AUC Score  
+
+**Key Results:**
+- Accuracy: **90%** (misleading due to imbalance)  
+- F1-score (minority class): **0.15**  
+- ROC-AUC: **0.737** → reasonable discrimination ability  
+
+## Model Interpretation
+- Converted coefficients to **odds ratios** for interpretability  
+- Identified key drivers of attrition  
 
 ## Key Insights
-* Distance from home strongly increases attrition risk
-* Higher income reduces likelihood of leaving
-* Work-life balance plays a significant role in retention
-* Overtime is associated with higher attrition
+- **Distance from home** significantly increases attrition risk  
+- **Overtime** strongly increases likelihood of leaving  
+- **Work-life balance** reduces attrition probability  
+- **Training frequency** improves employee retention  
+- Some job roles show higher turnover patterns  
 
 ## Output
-Final predictions are saved as: outputs/Predicted_Attrition.csv
-
-## Future Improvements
-* Apply SMOTE instead of random oversampling
-* Experiment with advanced models
-* Perform hyperparameter tuning
-* Deploy as a web application
+Final predictions are saved as: 
 
 ## Author
 Fazra Farook  
